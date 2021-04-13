@@ -1,0 +1,29 @@
+<div id="audio-list">
+    <audio id="audio-intro" class="audio" src="./hidden-object/assets/travel/audio/intro.mp3" type="audio/mpeg"></audio>
+    <audio id="game-over-win" class="audio" src="./hidden-object/assets/travel/audio/gameOverWin.mp3" type="audio/mpeg"></audio>
+    <audio id="game-over-lose" class="audio" src="./hidden-object/assets/travel/audio/gameOverLose.mp3" type="audio/mpeg"></audio>
+    <audio id="audio-board-clicked" class="audio" src="./hidden-object/assets/travel/audio/boardClicked.mp3" type="audio/mpeg"></audio>
+    <audio id="audio-correct-clicked" class="audio" src="./hidden-object/assets/travel/audio/correctClicked.mp3" type="audio/mpeg"></audio>
+    <audio id="audio-incorrect-clicked" class="audio" src="./hidden-object/assets/travel/audio/incorrectClicked.mp3" type="audio/mpeg"></audio>
+    <audio id="audio-try-again" class="audio" src="./hidden-object/assets/travel/audio/tryAgain.mp3" type="audio/mpeg"></audio>
+    <audio id="audio-claim-prize" class="audio" src="./hidden-object/assets/travel/audio/claimPrize.mp3" type="audio/mpeg"></audio>
+</div>
+
+<div id="game-container"> <!-- Where entire game loads -->
+    <div id="title" phrase-key="TITLE_TEXT"></div> <!-- Game Title Text/Image -->
+    <div id="intro-container" class="screen first-screen"> <!-- First load screen -->
+        <div id="intro-description" phrase-key="INTRO_DESCRIPTION"></div> <!-- Intro description -->
+        <div id="intro-button" phrase-Key="INTRO_BUTTON" show-screen="rules-container" class="screen-button"></div> <!-- Intro button/Play button -->
+    </div>
+    <div id="rules-container"  class="screen">
+        <div id="rules-header" phrase-key="RULES_HEADER"></div><!-- Rules header like 'How to play' -->
+        <div id="rules-description" phrase-key="RULES_DESCRIPTION"></div> <!-- Game rules goes here -->
+        <div id="play-button" phrase-key="PLAY_BUTTON" set-audio="audio-intro" show-screen="board-container" class="screen-button"></div>
+    </div>
+    <div id="board-container"  class="screen">
+        <div id="claim-prize-win" class="claim-prize-button" phrase-key="CLAIM_PRIZE_BUTTON"></div>
+        <div id="claim-prize-lose" class="claim-prize-button" phrase-key="CLAIM_PRIZE_BUTTON"></div>
+    </div>
+    <!-- End of the game this will show a random prize -->
+    <div id="prize-container"></div>
+</div>
